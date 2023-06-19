@@ -1,0 +1,2 @@
+$DOTFILES/i3/config=$HOME/.config/i3/config
+$DOTFILES/i3/i3blocks.conf=$HOME/.config/i3/i3blocks.conf

@@ -1,0 +1,3 @@
+$DOTFILES/scripts/wallpaper_scripts/get_random_wallpaper.sh=$HOME/.config/scripts/wallpaper_scripts/get_random_wallpaper.sh
+$DOTFILES/scripts/wallpaper_scripts/set_wallpaper.sh=$HOME/.config/scripts/wallpaper_scripts/set_wallpaper.sh
+$DOTFILES/scripts/wallpaper_scripts/current_wallpaper.txt=$HOME/.config/scripts/wallpaper_scripts/current_wallpaper.txt

@@ -1,0 +1,2 @@
+$DOTFILES/betterlockscreen/run.sh=$HOME/.config/betterlockscreen/run.sh
+$DOTFILES/betterlockscreen/betterlockscreenrc=$HOME/.config/betterlockscreenrc

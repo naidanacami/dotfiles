@@ -1,0 +1,41 @@
+# ~/.config/betterlockscreenrc
+
+# default options
+display_on=0
+span_image=false
+lock_timeout=300
+fx_list=(dim blur dimblur pixel dimpixel color)
+dim_level=40
+blur_level=1
+pixel_scale=10,1000
+solid_color=333333
+wallpaper_cmd="feh --bg-fill"
+# i3lockcolor_bin="i3lock-color" # Manually set command for i3lock-color
+
+# Common colours
+clear=00000000
+white=d8dee9
+black=2E3440
+grey=4C566A
+red=BF616A
+
+
+# default theme
+loginshadow=$black
+locktext="Papers, please."
+font="mononoki:style=bold" 
+ringcolor=$black
+insidecolor=$black
+separatorcolor=$black
+ringvercolor=3b4252
+insidevercolor=$black
+ringwrongcolor=$red
+insidewrongcolor=$black
+timecolor=$white
+greetercolor=$white
+layoutcolor=$clear
+keyhlcolor=$grey
+bshlcolor=$red
+verifcolor=$white
+wrongcolor=$red
+modifcolor=$red

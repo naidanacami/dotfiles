@@ -1,0 +1,2 @@
+$DOTFILES/scripts/changebrightness.sh=$HOME/.config/scripts/changebrightness.sh
+$DOTFILES/scripts/scrot_snip.sh=$HOME/.config/scripts/scrot_snip.sh
