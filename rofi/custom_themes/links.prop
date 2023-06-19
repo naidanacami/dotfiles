@@ -1,0 +1,8 @@
+$DOTFILES/rofi/custom_themes/colors.rasi=$HOME/.config/rofi/custom_themes/colors.rasi
+$DOTFILES/rofi/custom_themes/confirm.rasi=$HOME/.config/rofi/custom_themes/confirm.rasi
+$DOTFILES/rofi/custom_themes/powermenu_style.rasi=$HOME/.config/rofi/custom_themes/powermenu_style.rasi
+$DOTFILES/rofi/custom_themes/powermenu.sh=$HOME/.config/rofi/custom_themes/powermenu.sh
+$DOTFILES/rofi/custom_themes/run_style.rasi=$HOME/.config/rofi/custom_themes/run_style.rasi
+$DOTFILES/rofi/custom_themes/run.sh=$HOME/.config/rofi/custom_themes/run.sh
+$DOTFILES/rofi/custom_themes/window_style.rasi=$HOME/.config/rofi/custom_themes/window_style.rasi
+$DOTFILES/rofi/custom_themes/window.sh=$HOME/.config/rofi/custom_themes/window.sh

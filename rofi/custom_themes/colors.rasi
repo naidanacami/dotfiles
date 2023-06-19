@@ -1,0 +1,8 @@
+/* colors */
+* {
+  black: #00000000;
+  background: #303030;
+  foreground: #CFCFCF;
+  background-selected: #686868;
+	highlight: #b48ead;
+}
