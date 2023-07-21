@@ -32,7 +32,7 @@ echo "--                          Setting up i3...                           --"
 echo "-------------------------------------------------------------------------"
 yay -S --noconfirm ttf-cascadia-code font-awesome-5
 sudo pacman -S i3-gaps i3blocks feh numlockx rofi scrot xclip thunar --noconfirm
-yay -S betterlockscreen
+yay -S betterlockscreen --noconfirm
 mkdir -p ~/media/Wallpapers
 
 sudo pacman -S acpi python3 xorg gnome-keyring --noconfirm
