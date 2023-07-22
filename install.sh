@@ -1,11 +1,12 @@
 #!/bin/bash
+SCRIPT_DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 
 
 echo "-------------------------------------------------------------------------"
 echo "--           Setting up yay to download packages from AUR...           --"
 echo "-------------------------------------------------------------------------"
 # Make sure these packages are installed for installing AUR manager
-sudo pacman -S git base-devel --noconfirm --needed
+sudo pacman -S --noconfirm git base-devel
 # Download and Install yay AUR manager
 cd ~
 git clone "https://aur.archlinux.org/yay.git"
@@ -15,7 +16,7 @@ makepkg -si --noconfirm
 
 # misc packages
 sudo pacman -S --noconfirm firefox alacritty gimp 
-yay -S vscodium-bin --noconfirm
+yay -S --noconfirm vscodium-bin
 
 
 echo "-------------------------------------------------------------------------"
@@ -23,19 +24,23 @@ echo "--                     Setting up Login Manager...                     --"
 echo "-------------------------------------------------------------------------"
 # Display/Login Manager
 # emptty
-yay -S emptty --noconfirm
+yay -S --noconfirm emptty
 sudo systemctl enable emptty.service
 
 
 echo "-------------------------------------------------------------------------"
 echo "--                          Setting up i3...                           --"
 echo "-------------------------------------------------------------------------"
-yay -S --noconfirm ttf-cascadia-code font-awesome-5
-sudo pacman -S i3-gaps i3blocks feh numlockx rofi scrot xclip thunar --noconfirm
-yay -S betterlockscreen --noconfirm
+yay -S --noconfirm ttf-cascadia-code ttf-font-awesome
+sudo pacman -S --noconfirm i3-gaps i3blocks feh numlockx rofi scrot xclip thunar
+yay -S --noconfirm betterlockscreen
 mkdir -p ~/media/Wallpapers
 
-sudo pacman -S acpi python3 xorg gnome-keyring --noconfirm
+sudo pacman -S --noconfirm acpi python3 xorg gnome-keyring
+
+# Shotcut
+sudo pacman -S --noconfirm dunst
+yay -S --noconfirm brillo sxhkd
 
 
 
@@ -46,8 +51,8 @@ echo "-------------------------------------------------------------------------"
 echo "--                             Theming...                              --"
 echo "-------------------------------------------------------------------------"
 # Theming
-yay -S phinger-cursors --needed --noconfirm
-sudo pacman -S lxappearance pop-gtk-theme adwaita-icon-theme --needed --noconfirm
+yay -S --noconfirm phinger-cursors
+sudo pacman -S --noconfirm lxappearance pop-gtk-theme adwaita-icon-theme
 # ------------- XDG specification -------------
 if [ ! -d "~/.icons/default/" ]; then
     mkdir -p ~/.icons/default/
@@ -81,3 +86,15 @@ else
     cp ~/.icons/default/index.theme ~/.icons/default/index.theme.old
     sed -i '/gtk-cursor-theme-name=/c\gtk-cursor-theme-name=phinger-cursors' ~/.icons/default/index.theme 
 fi
+
+
+echo "-------------------------------------------------------------------------"
+echo "--                              Linking...                             --"
+echo "-------------------------------------------------------------------------"
+bash $SCRIPT_DIR/link.sh
+
+
+echo "-------------------------------------------------------------------------"
+echo "--                        Installation Complete                        --"
+echo "-------------------------------------------------------------------------"
+echo "                           Please reboot system                          "
