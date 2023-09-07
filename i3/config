@@ -331,14 +331,14 @@ font pango:monospace 8
 exec_always --no-startup-id picom --config  ~/.config/picom/picom.conf
 
 # Wallpaper
-exec_always --no-startup-id $HOME/.config/scripts/wallpaper_scripts/get_random_wallpaper.sh ~/media/Wallpapers/
+exec_always --no-startup-id $HOME/.config/scripts/wallpaper_scripts/get_random_wallpaper.sh ~/Pictures/Wallpapers/
 exec_always --no-startup-id $HOME/.config/scripts/wallpaper_scripts/set_wallpaper.sh
 
 # Numlock
 exec_always --no-startup-id numlockx on
 
 # Lockscreen
-#exec_always --no-startup-id betterlockscreen -u ~/media/Wallpapers
+#exec_always --no-startup-id betterlockscreen -u ~/Pictures/Wallpapers
 
 
 # Start XDG autostart .desktop files using dex. See also
@@ -391,7 +391,7 @@ bindsym $mod2+l exec betterlockscreen -l blur -- --time-str="%I:%M:%S %p"
 bindsym $mod+x exec ~/.config/rofi/custom_themes/powermenu.sh
 
 # Screen Snip
-bindsym --release $mod+Shift+s exec ~/.config/custom_scripts/scrot_snip.sh
+bindsym --release $mod+Shift+s exec ~/.config/scripts/scrot_snip.sh
 
 
 
@@ -408,6 +408,8 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-
 # exit i3 (logs you out of your X session)
 #bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+
+# floating for pavucontrol
+for_window [class="Pavucontrol" instance="pavucontrol"] floating enable

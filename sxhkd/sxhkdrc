@@ -1,5 +1,5 @@
 XF86MonBrightnessUp
-    ~/.config/scripts/changebrightness.sh Up
+    ~/.config/scripts/changebrightness.sh up
 
 XF86MonBrightnessDown
     ~/.config/scripts/changebrightness.sh down
