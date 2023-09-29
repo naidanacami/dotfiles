@@ -11,3 +11,5 @@ PS1='[\u@\h \W]\$ '
 
 alias code=vscodium
 alias la="ls -a"
+
+PATH=$PATH:/home/nicho/bin

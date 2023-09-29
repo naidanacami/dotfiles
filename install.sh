@@ -31,22 +31,32 @@ sudo systemctl enable emptty.service
 echo "-------------------------------------------------------------------------"
 echo "--                          Setting up i3...                           --"
 echo "-------------------------------------------------------------------------"
-yay -S --noconfirm ttf-cascadia-code ttf-font-awesome noto-fonts
+yay -S --noconfirm ttf-cascadia-code ttf-font-awesome noto-fonts ttf-iosevka 
 sudo pacman -S --noconfirm i3-gaps i3blocks feh numlockx rofi scrot xclip thunar pavucontrol
 yay -S --noconfirm betterlockscreen
 mkdir -p ~/Pictures/Wallpapers
 
-sudo pacman -S --noconfirm acpi python3 xorg gnome-keyring picom
+sudo pacman -S --noconfirm acpi python3 xorg gnome-keyring picom wget
 
 # Shotcut
 sudo pacman -S --noconfirm dunst
 yay -S --noconfirm brillo sxhkd
 
+# rclone
 
-
-
-
-
+# echo "-------------------------------------------------------------------------"
+# echo "--LaTeX--"
+# echo "-------------------------------------------------------------------------"
+# cd ~/Downloads
+# mkdir ./tmp
+# cd ./tmp
+# wget https://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz 
+# zcat < install-tl-unx.tar.gz | tar xf -
+# rm ./*.tar.gz
+# cd install-tl-*
+# sudo perl ./install-tl --no-interaction
+# # WIP
+# sudo pacman -S zathura texlive-doc ripgrep --noconfirm
 
 echo "-------------------------------------------------------------------------"
 echo "--                             Theming...                              --"
@@ -105,15 +115,19 @@ git clone https://github.com/AdnanHodzic/auto-cpufreq.git
 cd auto-cpufreq && sudo ./auto-cpufreq-installer
 sudo auto-cpufreq --install
 
-sudo pacman -S --noconfirm tlp
+sudo pacman -S --noconfirm tlp tlp-rdw
 sudo systemctl enable tlp.service
 sudo systemctl start tlp.service
+systemctl mask systemd-rfkill.service systemd-rfkill.socket
+sudo tlp start
+
 
 
 echo "-------------------------------------------------------------------------"
 echo "--                              Linking...                             --"
 echo "-------------------------------------------------------------------------"
 bash $SCRIPT_DIR/link.sh
+
 
 
 
